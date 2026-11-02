@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Using meta data even with a project that isn't going to be on the web is still a good practice
+     As well as setting content width
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome - Examina Lite</title>
+<!-- connecting to styles css as stylesheet -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="top">
+    <p class="site-name">Examina Lite</p>
+</header>
+
+<!-- same nav on every page so the user doesn't get lost -->
+<nav>
+    <ul>
+        <li><a href="onboarding.html">Start</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="flashcards.html">Flashcards</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="links.html">Useful links</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="onboard">
+        <h1>Welcome to Examina!</h1>
+        <p>Examina lite is a specialised version of
+            <a href="https://www.rangiapp.com" target="_blank">Examina </a>
+            dedicated to year 11 Biology extension.
+            <br>
+            <strong>
+                There are quality lessons, useful quizzes, and accurate flashcards to make your study perfect.
+            </strong>
+        </p>
+
+        <!-- Input for the user's name using a tutorial from W3schools:  https://www.w3schools.com/css/css_form_inputs.asp-->
+        <label for="fname">What should we call you?</label><br>
+        <input type="text" id="fname" maxlength="30" autocomplete="given-name">
+        <button type="button" onclick="saveName()">Let's go</button>
+        <p id="nameMessage" aria-live="polite"></p>
+
+        <p><a href="index.html">Go to the homepage</a></p>
+    </section>
+</main>
+
+<footer>
+    <p>Created by Artin Amraei</p>
+    <p>Licensed under
+       <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></p>
+    <p>Font: <a href="https://fonts.google.com/specimen/Nunito" target="_blank">Nunito</a> from Google Fonts</p>
+</footer>
+
+<script src="onboarding.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+/* the body is a flex column so main can grow and push the footer down, flexbox from W3schools
+   https://www.w3schools.com/css/css3_flexbox_container.asp */
+body {
+    font-family: "Nunito", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    margin: 0;
+    padding: 0;
+    display: flex; /* flexbox for stickyfooter */
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #0b3b2e; /* dark green, suits biology */
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.site-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.67em 0;
+}
+
+nav {
+    background-color: #14584a;
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex; /* grok academy layout */
+    justify-content: center;
+    flex-wrap: wrap; /* for phones, the buttons go to a new line thanks to this amazing wrap */
+    gap: 20px; /* spcae betwen the buttons without margins on each oneto keep aesthetics */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    background-color: #23755f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s; /* transition for better aesthetics -> https://www.w3schools.com/css/css3_transitions.asp */
+}
+
+nav a:hover {
+    background-color: #7ac143; /* leaf green */
+    color: #0b3b2e;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto; /* auto left and right = centred, https://www.w3schools.com/css/css_align.asp */
+    flex: 1; /* pushes all footers to the bottom, main takes all the spare space in the body flex column */
+}
+
+section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    /* rgba last number is how see-through the shadow is, https://www.w3schools.com/css/css3_shadows.asp */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* 3d floating effect improved(iterated ) from v1 using the shadow */
+}
+
+h2 {
+    color: #0b3b2e;
+    border-bottom: 2px solid #f5f5f7;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #14584a;
+}
+
+#navbox ul {
+    display: flex; /* flexbox so I can add more tools later */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbox li {
+    background-color: #f5f5f7;
+    border-radius: 12px;
+    border-top: 6px solid #7ac143;
+    padding: 20px;
+    width: 230px; /* keeps the cards even */
+    position: relative; /* needed so the ::after box below sticks to this card and not the whole page */
+}
+
+#navbox li:hover {
+    background-color: white;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15); /* looks clickable */
+}
+
+/* ::after makes an invisible box on the link that goes over the whole card (top right bottom left all 0)
+   so the whole card is a link. pseudo elements + position from W3schools (learning + refrence):
+   https://www.w3schools.com/css/css_pseudo_elements.asp
+   https://www.w3schools.com/css/css_position.asp */
+#navbox li a::after {
+    content: ""; /* has to be there or the box doesnt show up at all */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#greeting {
+    color: #0b3b2e;
+    border-bottom: none;
+}
+
+button {
+    font-family: inherit; /* not the ugly default */
+    background-color: #7ac143;
+    color: #0b3b2e;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0b3b2e;
+    color: white;
+}
+
+input {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 12px;
+    border: 2px solid #d2d2d7;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+details {
+    background-color: #f5f5f7;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 6px solid #7ac143;
+}
+
+summary {
+    font-weight: bold;
+    color: #0b3b2e;
+    cursor: pointer;
+}
+
+.lesson-card {
+    background-color: #f5f5f7;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 6px solid #23755f;
+}
+
+.question {
+    background-color: #f5f5f7;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 6px solid #7ac143;
+}
+
+.question label {
+    display: block;
+    cursor: pointer;
+}
+
+.feedback {
+    font-weight: bold;
+}
+
+#nameMessage {
+    color: darkred;
+    font-weight: bold;
+}
+
+#score {
+    font-weight: bold;
+}
+
+#resetBtn {
+    background-color: #e3e3e8;
+    margin-left: 10px;
+}
+
+footer {
+    background-color: #0b3b2e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* fixes the link colours in the footer so they don't mix with the blue */
+footer a {
+    color: #7ac143;
+}

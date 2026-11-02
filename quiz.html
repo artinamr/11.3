@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz - Examina Lite</title>
+<!-- connecting to styles css as stylesheet -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="top">
+    <p class="site-name">Examina Lite</p>
+</header>
+
+<!-- same nav on every page so the user doesn't get lost -->
+<nav>
+    <ul>
+        <li><a href="onboarding.html">Start</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="flashcards.html">Flashcards</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="links.html">Useful links</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="quiz">
+        <h1>Quiz</h1>
+        <p>Answer in your head first, then open the answer to check. No cheating.</p>
+        <p>Pick an answer for each multiple choice question, then press <strong>Check my answers</strong>.</p>
+
+        <!-- each question is a div, the answer hides in details like the flashcards -->
+        <div class="question">
+            <h3 id="title-q1">1. What was the atmosphere of prebiotic Earth like?</h3>
+            <div id="options-q1" role="radiogroup" aria-labelledby="title-q1">
+                <label><input type="radio" id="q1a" name="q1" value="a"> Mostly oxygen, like today</label>
+                <label><input type="radio" id="q1b" name="q1" value="b"> A reducing atmosphere with no free oxygen</label>
+                <label><input type="radio" id="q1c" name="q1" value="c"> There was no atmosphere</label>
+            </div>
+            <p class="feedback" id="feedback-q1" aria-live="polite"></p>
+
+            <details> <!--Using details to hide the text-->
+                <summary>Open the answer</summary>
+                <p>A reducing atmosphere with no free oxygen. Reducing means no free oxygen. Lesson 1.</p>
+            </details>
+        </div>
+
+        <div class="question">
+            <h3>2. Name two energy sources on prebiotic Earth.</h3>
+
+            <details> <!--Using details to hide the text-->
+                <summary>Open the answer</summary>
+                <p>Any two of volcanoes, lightning, UV from the sun. Lesson 1.</p>
+            </details>
+        </div>
+
+        <div class="question">
+            <h3 id="title-q3">3. What did Miller-Urey actually produce?</h3>
+            <div id="options-q3" role="radiogroup" aria-labelledby="title-q3">
+                <label><input type="radio" id="q3a" name="q3" value="a"> Living cells</label>
+                <label><input type="radio" id="q3b" name="q3" value="b"> Amino acids</label>
+                <label><input type="radio" id="q3c" name="q3" value="c"> DNA</label>
+            </div>
+            <p class="feedback" id="feedback-q3" aria-live="polite"></p>
+
+            <details> <!--Using details to hide the text-->
+                <summary>Open the answer</summary>
+                <p>Amino acids. Not cells, not DNA. Lesson 2.</p>
+            </details>
+        </div>
+
+        <div class="question">
+            <h3 id="title-q4">4. What did the electrodes represent?</h3>
+            <div id="options-q4" role="radiogroup" aria-labelledby="title-q4">
+                <label><input type="radio" id="q4a" name="q4" value="a"> The sun</label>
+                <label><input type="radio" id="q4b" name="q4" value="b"> Lightning</label>
+                <label><input type="radio" id="q4c" name="q4" value="c"> Volcanoes</label>
+            </div>
+            <p class="feedback" id="feedback-q4" aria-live="polite"></p>
+
+            <details> <!--Using details to hide the text-->
+                <summary>Open the answer</summary>
+                <p>Lightning. Lesson 2.</p>
+            </details>
+        </div>
+
+        <div class="question">
+            <h3 id="title-q5">5. What's the quickest way to tell prokaryotic and eukaryotic apart?</h3>
+            <div id="options-q5" role="radiogroup" aria-labelledby="title-q5">
+                <label><input type="radio" id="q5a" name="q5" value="a"> How big the cell is</label>
+                <label><input type="radio" id="q5b" name="q5" value="b"> If it has a cell wall</label>
+                <label><input type="radio" id="q5c" name="q5" value="c"> If the genetic material is in a membrane-bound nucleus</label>
+            </div>
+            <p class="feedback" id="feedback-q5" aria-live="polite"></p>
+
+            <details> <!--Using details to hide the text-->
+                <summary>Open the answer</summary>
+                <p>Whether the genetic material is in a membrane-bound nucleus. In a nucleus is eukaryotic, loose is prokaryotic. Lesson 3.</p>
+            </details>
+        </div>
+
+        <div class="question">
+            <h3>6. Name all seven life processes.</h3>
+
+            <details> <!--Using details to hide the text-->
+                <summary>Open the answer</summary>
+                <p>MRS GREN. Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion,
+                   Nutrition. Lesson 3.</p>
+            </details>
+        </div>
+
+        <div class="question">
+            <h3 id="title-q7">7. Why is binary fission asexual?</h3>
+            <div id="options-q7" role="radiogroup" aria-labelledby="title-q7">
+                <label><input type="radio" id="q7a" name="q7" value="a"> One parent and the offspring are identical</label>
+                <label><input type="radio" id="q7b" name="q7" value="b"> Because it's fast</label>
+                <label><input type="radio" id="q7c" name="q7" value="c"> Because it happens in the dark</label>
+            </div>
+            <p class="feedback" id="feedback-q7" aria-live="polite"></p>
+
+            <details> <!--Using details to hide the text-->
+                <summary>Open the answer</summary>
+                <p>One parent and the offspring are identical. One parent, two identical cells, no variation. Lesson 4.</p>
+            </details>
+        </div>
+
+        <div class="question">
+            <h3>8. Why is it called EXTRAcellular digestion?</h3>
+
+            <details> <!--Using details to hide the text-->
+                <summary>Open the answer</summary>
+                <p>Because the enzymes digest the food outside the cell. Lesson 4.</p>
+            </details>
+        </div>
+
+        <div class="question">
+            <h3>9. Write the word equation for anaerobic respiration in fungi.</h3>
+
+            <details> <!--Using details to hide the text-->
+                <summary>Open the answer</summary>
+                <p>glucose &rarr; ethanol + carbon dioxide (+ energy). Lesson 4.</p>
+            </details>
+        </div>
+
+        <button id="checkBtn" type="button" onclick="checkAnswers()">Check my answers</button>
+        <button id="resetBtn" type="button" onclick="resetQuiz()">Try again</button>
+        <p id="score" aria-live="polite"></p>
+
+        <p>Got them all? Revise with the <a href="flashcards.html">flashcards</a>.</p>
+    </section>
+</main>
+
+<footer>
+    <p>Created by Artin Amraei</p>
+    <p>Licensed under
+       <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></p>
+    <p>Font: <a href="https://fonts.google.com/specimen/Nunito" target="_blank">Nunito</a> from Google Fonts</p>
+       <p>some of the text is partially copied from the teachers' slides for maximum accuracy</p>
+</footer>
+
+<script src="quiz.js"></script>
+</body>
+</html>
